@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-28 15:39+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/nls.h:3
+msgid "Error opening file"
+msgstr ""
+
+#: ../src/nls.h:4
+msgid "Valgrind errors:"
+msgstr ""
+
+#: ../src/nls.h:5
+msgid "Something went wrong while converting:"
+msgstr ""
+
+#: ../src/nls.h:6
+msgid "Non numerical input or illegal whitespace found in input:"
+msgstr ""
+
+#: ../src/nls.h:7
+msgid "Error while reading values..."
+msgstr ""
+
+#: ../src/nls.h:10
+msgid "FATAL ERROR: Could not allocate memory (in bytes):"
+msgstr ""
+
+#: ../src/nls.h:13
+msgid "Failed to set locale:"
+msgstr ""
+
+#: ../src/nls.h:14
+msgid "Failed to set catalog directory:"
+msgstr ""
+
+#: ../src/nls.h:15
+msgid "Failed to set text domain:"
+msgstr ""
+
+#: ../src/nls.h:19
+msgid "number of elements = "
+msgstr ""
+
+#: ../src/nls.h:20
+msgid "standard deviation = "
+msgstr ""
+
+#: ../src/nls.h:21
+msgid "population standard deviation = "
+msgstr ""
+
+#: ../src/nls.h:22
+msgid "variance (standard deviation) = "
+msgstr ""
+
+#: ../src/nls.h:23
+msgid "variance (population standard deviation) = "
+msgstr ""
+
+#: ../src/nls.h:24
+msgid "mean = "
+msgstr ""
+
+#: ../src/nls.h:25
+msgid "median = "
+msgstr ""
+
+#: ../src/nls.h:26
+msgid "min = "
+msgstr ""
+
+#: ../src/nls.h:27
+msgid "max = "
+msgstr ""
+
+#: ../src/nls.h:28
+msgid "sum = "
+msgstr ""
+
+#: ../src/nls.h:29
+msgid "mode = N/A (all values are unique)"
+msgstr ""
+
+#: ../src/nls.h:30
+msgid "mode = "
+msgstr ""
+
+#: ../src/nls.h:31
+msgid "value = "
+msgstr ""
+
+#: ../src/nls.h:35
+msgid "Unknown option:"
+msgstr ""

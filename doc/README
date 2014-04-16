@@ -1,0 +1,79 @@
+Example usage:
+
+In its default output, avgcalc looks like this:
+
+$ echo -e "1.1\n1.22\n1.4323\n1.32\n2.3\n1.88\n1.1" | avgcalc
+number of elements = 7
+standard deviation = 0.450309
+population standard deviation = 0.416905
+variance (standard deviation) = 0.202778
+variance (population standard deviation) = 0.173810
+mean = 1.478900
+median = 1.320000
+max = 2.300000
+min = 1.100000
+sum = 10.352300
+mode = 1.100000
+
+
+Find out average, min and max memory consumption by currently running bash processes:
+
+$ ps -C bash -o sz  | avgcalc -i -m -o -M
+mean = 35840.846154
+median = 36329.000000
+max = 36394.000000
+min = 29894.000000
+
+Find biggest and smallest file in a directory:
+
+$ ls -s | egrep -v "^total" | avgcalc -i -o
+max = 236.000000
+min = 4.000000
+
+Get the values plus some statistics across a number of apachebench runs:
+
+$ for loop in {1..10} ; do ab -n 50 -c 2 http://localhost/ | awk '/Requests\ per\ second/ { print $4 }' ; done | avgcalc -p -m -s -o
+value = 17.690000
+value = 18.370000
+value = 18.770000
+value = 18.770000
+value = 18.830000
+value = 18.990000
+value = 19.010000
+value = 19.030000
+value = 19.050000
+value = 19.260000
+standard deviation = 0.449890
+mean = 18.777000
+max = 19.260000
+min = 17.690000
+
+
+But.. I have a CSV?  
+In the spirt of true UNIX philosophy, avgcalc will not handle this for you. There are however already
+a dozen other tools which can. For example: sed,
+
+$ echo "1,2,3,4,5,6,1" | sed 's/,/\n/g' | avgcalc -M -f
+median = 3.000000
+mode = 1.000000
+
+or `tr`:
+
+$ echo "1,2,3,4,5,6,1" | tr ',' '\n' | avgcalc -M -f
+median = 3.000000
+mode = 1.000000
+
+
+Sorting
+========
+As you can see from the apachebench example above, avgcalc does sort its input and can print it out for you (-p). For portability reasons, it deploys the libc implementation of qsort. 
+If your data already is sorted, you can supply the -a switch which makes avgcalc assume that the input is sorted and skips that step.
+Should this not be the case, and you supply -a, results for values requiring sorting will most likely be incorrect. 
+
+Though strictly speaking not necessary - getting the mode from the data set results in it being sorted. 
+This is to avoid having to store the entire result set in memory twice - CPU overhead tradeoff to save memory
+
+There are probably better ways of getting your data sorted, most systems have the `sort` utility which notably faster than avgcalc at sorting (at the expense of increased
+memory footprint). Given 10 million records, `sort` takes 4.4 seconds on my laptop, whereas avgcalc takes 14.8 seconds. So with a sufficiently large dataset and enough memory to keep your 
+dataset in it, you might be better off piping your numbers through `sort` and start avgcalc with the -a flag. If memory short and you hit swap, leaving the sorting to avgcalc will probably 
+be the better choice.

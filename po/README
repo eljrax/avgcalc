@@ -1,0 +1,3 @@
+extract:
+        xgettext --force-po -d avgcalc -C -o avgcalc.pot -k_ ../src/*.c
+

@@ -1,0 +1,52 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-01 18:36+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../src/main.c:26
+#, c-format
+msgid ""
+"Usage: %s [OPTION]... [FILE]...\n"
+"    text     -m\tPrint mean only\n"
+"        -s\tPrint standard deviation only\n"
+"        -v\tPrint variance (standard deviation) only\n"
+"        -S\tPrint population standard deviation only\n"
+"        -V\tPrint variance (population standard deviation only\n"
+"        asfaf\n"
+msgstr ""
+
+#: ../src/main.c:59
+#, c-format
+msgid "Exceptionally long line detected - unlikely to be valuable input.\n"
+msgstr ""
+
+#: ../src/main.c:67
+msgid "Something went wrong while converting"
+msgstr ""
+
+#: ../src/main.c:118
+#, c-format
+msgid "Hello, world!\n"
+msgstr ""
+
+#: ../src/main.c:129
+msgid "Unknown option"
+msgstr ""
+
+#: ../src/main.c:142
+msgid "Error opening file"
+msgstr ""

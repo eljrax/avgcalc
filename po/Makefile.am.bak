@@ -1,0 +1,19 @@
+DOMAINS = @PACKAGE@
+
+all:
+	
+
+install:
+	echo mkdir -p @localedir@/LC_MESSAGES
+	for file in `ls *.po` ; do \
+		fn=`echo $$file | cut -d '.' -f 1`; \
+		msgfmt -c -v -o $$fn.mo $$file; \
+		mkdir -p @localedir@/$$fn/LC_MESSAGES ; \
+		cp -rf $$fn.mo  @localedir@/$$fn/LC_MESSAGES/@PACKAGE@.mo; \
+	done
+
+uninstall:
+	for file in `ls *.po` ; do \
+		fn=`echo $$file | cut -d '.' -f 1`; \
+		rm -f @localedir@/$$fn/LC_MESSAGES/@PACKAGE@.mo; \
+	done

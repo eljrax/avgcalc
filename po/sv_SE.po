@@ -1,0 +1,152 @@
+# Swedish translations for avg package
+# Svenska översättningar för paket avg.
+# Copyright (C) 2012 THE avg'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the avg package.
+# Automatically generated, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: avg 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-05-28 15:39+0100\n"
+"PO-Revision-Date: 2012-05-28 15:39+0100\n"
+"Last-Translator: EL\n"
+"Language-Team: none\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/nls.h:3
+msgid "Error opening file"
+msgstr "Kunde inte öppna fil"
+
+#: ../src/nls.h:4
+msgid "Valgrind errors:"
+msgstr "Valgrind fel:"
+
+#: ../src/nls.h:5
+msgid "Something went wrong while converting:"
+msgstr "Något gick fel med konvertering från text till decimalnummer:"
+
+#: ../src/nls.h:6
+msgid "Non numerical input or illegal whitespace found in input:"
+msgstr "Icke-numeriskt tecken hittat i inlästa värden:"
+
+#: ../src/nls.h:7
+msgid "Error while reading values..."
+msgstr "Fel uppstod under läsning av värden"
+
+#: ../src/nls.h:10
+msgid "FATAL ERROR: Could not allocate memory (in bytes):"
+msgstr "ALVARLIGT FEL: Kunde inte allokera minne (i bytes):"
+
+#: ../src/nls.h:13
+msgid "Failed to set locale:"
+msgstr "Kunde inte sätta lokal:"
+
+#: ../src/nls.h:14
+msgid "Failed to set catalog directory:"
+msgstr "Kunde inte sätta katalog"
+
+#: ../src/nls.h:15
+msgid "Failed to set text domain:"
+msgstr "Kunde inte sätta text domän"
+
+#: ../src/nls.h:19
+msgid "number of elements = "
+msgstr "antal värden = "
+
+#: ../src/nls.h:20
+msgid "standard deviation = "
+msgstr "standardavvikelse = "
+
+#: ../src/nls.h:21
+msgid "population standard deviation = "
+msgstr "kontinuerlig standardavvikelse = "
+
+#: ../src/nls.h:22
+msgid "variance (standard deviation) = "
+msgstr "varians (diskret sannorliksfördelning) = "
+
+#: ../src/nls.h:23
+msgid "variance (population standard deviation) = "
+msgstr "vaians (kontinuerlig) = "
+
+#: ../src/nls.h:24
+msgid "mean = "
+msgstr "snitt = "
+
+#: ../src/nls.h:25
+msgid "median = "
+msgstr "median = "
+
+#: ../src/nls.h:26
+msgid "min = "
+msgstr "minimumvärde = "
+
+#: ../src/nls.h:27
+msgid "max = "
+msgstr "maximumvärde = "
+
+#: ../src/nls.h:28
+msgid "sum = "
+msgstr "summa = "
+
+#: ../src/nls.h:29
+msgid "mode = N/A (all values are unique)"
+msgstr "typvärde = N/A (samtliga värden är unika)"
+
+#: ../src/nls.h:30
+msgid "mode = "
+msgstr "typvärde = "
+
+#: ../src/nls.h:31
+msgid "value = "
+msgstr "värde = "
+
+#: ../src/nls.h:35
+msgid "Unknown option:"
+msgstr "Ogilltig flagga:"
+
+#~ msgid "min"
+#~ msgstr "minimumvärde"
+
+#~ msgid "max"
+#~ msgstr "maximumvärde"
+
+#~ msgid "sum"
+#~ msgstr "summa"
+
+#~ msgid ""
+#~ "Usage: %s [OPTION]... [FILE]...\n"
+#~ "    text     -m\tPrint mean only\n"
+#~ "        -s\tPrint standard deviation only\n"
+#~ "        -v\tPrint variance (standard deviation) only\n"
+#~ "        -S\tPrint population standard deviation only\n"
+#~ "        -V\tPrint variance (population standard deviation only\n"
+#~ "        -M\tPrint median only\n"
+#~ "        -f\tPrint mode only\n"
+#~ "        -e\tPrint number of elements only\n"
+#~ "        \n"
+#~ msgstr ""
+#~ "Användning: %s [FLAGGA]... [FIL]...\n"
+#~ "    text     -m\tSkriv endast ut snittvärde \n"
+#~ "        -s\tSkriv endast ut sandardavvikelse \n"
+#~ "        -v\tSkriv endast ut diskret varians\n"
+#~ "        -S\tSkriv endast ut kontinuerlig standardavvikelse\n"
+#~ "        -V\tSkriv endast ut kontinuerlig varians\n"
+#~ "        -M\tSkriv endast ut median\n"
+#~ "        -f\tSkriv endast ut typvärde\n"
+#~ "        -e\tSkriv endast ut antal värden\n"
+#~ "        \n"
+
+#~ msgid "Exceptionally long line detected - unlikely to be valuable input.\n"
+#~ msgstr "Exceptionellt lång rad funnen -  osannorlikt användbar input.\n"
+
+#~ msgid "Hello, world!\n"
+#~ msgstr "Hej varlden!\n"
+
+#~ msgid "In get_mode - could not allocate %d bytes of memory.."
+#~ msgstr "I get_mode - kunde inte allokera %d bytes minne.."

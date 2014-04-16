@@ -1,0 +1,128 @@
+.TH AVGCALC "1" "May 2012" "avgcalc 0.1" "User Commands"
+.SH NAME
+avgcalc \- get statistical information such as mean, variance, standard deviation etc. from input
+.SH SYNOPSIS
+.B avgcalc
+[\fIoptions ...\fR] [\fIfile ...\fR]
+.SH DESCRIPTION
+avgcalc reads decimal values from the named input 
+.I
+FILE
+(or standard input if no files are named
+
+Note: All of the "Print" options below can be used in combination with each other. Leaving them out entirely will output all available calculations
+
+.TP
+\fB\-m\fR
+Print mean only
+.TP
+\fB\-s\fR
+Print standard deviation only
+.TP
+\fB\-v\fR
+Print variance (standard deviation) only
+.TP
+\fB\-S\fR
+Print population standard deviation only
+.TP
+\fB\-V\fR
+Print variance (population standard deviation) only
+.TP
+\fB\-M\fR
+Print median only
+.TP
+\fB\-p\fR
+Print out sorted values (not printed in normal output if omitted)
+.TP
+\fB\-o\fR
+Print max and min values only
+.TP
+\fB\-t\fR
+Print sum only
+.TP
+\fB\-i\fR
+Ignore lines with garbage input as much as possible (ie. tolerate 5M and ignore lines not beginning with numbers)
+.TP
+\fB\-f\fR
+Print mode only
+.TP
+\fB\-e\fR
+Print number of elements only
+.TP
+\fB\-a\fR
+Assume sorted input \- avoids sorting
+.TP
+\fB\-p\fR
+Print out sorted values (not printed in normal output if omitted)
+.TP
+\fB\-o\fR
+Print max and min values only
+.TP
+\fB\-t\fR
+Print sum only
+.TP
+\fB\-a\fR
+Assume that the input is already sorted. This tells avgcalc to not sort the input, even if you request a computation which requires a sorted dataset. 
+There are faster ways of sorting the data than letting avgcalc do it as it uses qsort() for portability reasons. However unless the size of your dataset
+is in the hundreds and hundreds of megabytes, this will not have a noticeable impact. But if you do have a dataset of that size, consider sorting it before feeding it to avgcalc.
+.br
+Note though, the data is only sorted if it needs to be. If you, for example specify \fB-m\fR, no sorting will take place as avgcalc can obtain the mean without sorting.
+.TP
+\fB\-i\fR
+Ignore lines with garbage input as much as possible. This will for example consider "5.1Mb " or "5.1 Mb" and so on as valid input, but not "M5.1".
+It also silently ignores any lines not beginning with numbers. Only use this if you know exactly what your dataset looks like, as it may yield
+in unexpected results otherwise.
+.SH EXAMPLES
+Get all available statistic information about values given on stdin: 
+.br
+$ echo -e "1.2\\n1.23\\n1.32\\n1.11\\n1.23" | avgcalc
+.br
+number of elements = 5
+.br
+standard deviation = 0.075299
+.br
+population standard deviation = 0.067350
+.br
+variance (standard deviation) = 0.005670
+.br
+variance (population standard deviation) = 0.004536
+.br
+mean = 1.218000
+.br
+median = 1.230000
+.br
+max = 1.320000
+.br
+min = 1.110000
+.br
+mode = 1.230000
+
+Get the mean and median size of files in the current working directory:
+.br
+$ du -h . | avgcalc -i -m -M
+.br
+mean = 64.661538
+.br
+median = 4.000000
+
+Get the max, min, mean and sum of bytes sent in responses by Apache:
+.br
+# awk '{ print $10 }'  < /var/log/httpd/access_log | avgcalc -o -m -t -i
+.br
+mean = 23.833465
+.br
+max = 5305.000000
+.br
+min = 3.000000
+.br
+sum = 454099.000000
+
+.SH AUTHOR
+Written by Erik Ljungstrom <erik[-at-]ibiblio[-dot-]org>
+
+.SH REPORTING BUGS
+Please use the issue tracker at https://github.com/eljrax/avgcalc/issues 
+.br
+Patches are welcome.
+
+

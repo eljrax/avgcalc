@@ -16,7 +16,7 @@
    Foundation, Inc., 51 Franklin Street - Fifth Floor, Boston, MA
    02110-1301, USA.  */
 
-/* Written April 2012 by Erik Ljungstrom.  */
+/* Author: Erik Ljungstrom.  */
 
 #include "main.h"
 
@@ -49,7 +49,7 @@ init (struct data *d, struct output *o)
   d->stdev = 0.;
   d->num_modes = 0;
   d->ignore_garbage = 0;
-  d->need_sorting = 0;
+  d->need_sorting = SORT;
   d->max = 0.;
   d->min = 0.;
   d->vals = malloc (sizeof (double) * VALS_SIZE);

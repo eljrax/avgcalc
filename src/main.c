@@ -16,7 +16,7 @@
  * Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-/* Written April 2012 by Erik Ljungstrom.  */
+/* Author: Erik Ljungstrom.  */
 
 #include "main.h"
 #include <limits.h>
@@ -67,7 +67,7 @@ need_sorting (int need_sorting, struct output *o)
 {
 
   /* If -a was given (overrides everything else) */
-  if (need_sorting == SORT)
+  if (need_sorting == DONT_SORT)
   {
     return DONT_SORT;
   }

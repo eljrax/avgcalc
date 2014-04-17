@@ -16,7 +16,7 @@
  * Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-/* Written April 2012 by Erik Ljungstrom.  */
+/* Author: Erik Ljungstrom.  */
 
 #include "main.h"
 /*

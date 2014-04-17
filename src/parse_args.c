@@ -17,7 +17,7 @@
  * Franklin Street - Fifth Floor, Boston, MA 02110-1301, USA.
  */
 
-/* Written April 2012 by Erik Ljungstrom.  */
+/* Author: Erik Ljungstrom.  */
 
 #include "main.h"
 
@@ -133,7 +133,7 @@ parse_args (char *argv[], int argc, struct data *d, struct output *o)
       }
       break;
     case 'a':
-      d->need_sorting = 1;
+      d->need_sorting = DONT_SORT;
       break;
     case 'p':
       o->print_vals = 1;

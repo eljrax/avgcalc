@@ -1,6 +1,20 @@
 tests/
 autom4te.cache/
 
+Makefile
+config.h
+config.log
+config.status
+doc/Makefile
+intl/Makefile
+man/Makefile
+po/Makefile
+src/.deps/
+src/Makefile
+src/avgcalc
+stamp-h1
+
+
 # Object files
 *.o
 *.ko

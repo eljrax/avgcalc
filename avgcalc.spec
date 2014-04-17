@@ -8,7 +8,7 @@ Group: Applications/Statistics
 Source: http://theon.synackfin.co.uk/~erik/avgcalc-0.1.tar.gz
 URL: http://theon.synackfin.co.uk/~erik/
 Vendor: Erik Ljungstrom
-Packager: Erik Ljungstrom <erik@ibiblio.org>
+Packager: Erik Ljungstrom < erik[-at-]ibiblio[-dot-]org >
 
 %description
 Reads numbers from a file or stdin and spits out statistical

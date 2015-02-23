@@ -1,5 +1,7 @@
 AM_CFLAGS = --pedantic -Wall -O2  --std=c89
 AM_LDFLAGS = -lm $(LIBINTL)
+avgcalc_LDADD = -lm $(LIBINTL)
+LDADD = -lm $(LIBINTL)
 
 # this lists the binaries to produce, the (non-PHONY, binary) targets in
 # # the previous manual Makefile

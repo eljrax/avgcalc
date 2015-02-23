@@ -25,3 +25,4 @@ AC_CHECK_FUNCS([pow setlocale sqrt strerror gettext])
 
 AC_OUTPUT( Makefile src/Makefile doc/Makefile man/Makefile intl/Makefile po/Makefile )
 
+LDADD="$LDADD -lm"
